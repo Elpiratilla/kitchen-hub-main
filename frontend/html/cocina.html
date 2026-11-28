@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Encuentra las cocinas profesionales de Kitchen Hub en el mapa y compara ubicación, equipo y precio por hora.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cocinas | Kitchen Hub">
+    <meta property="og:description" content="Mira dónde están nuestras cocinas y elige la que mejor te queda.">
+    <meta property="og:image" content="../img/cocina.webp">
+
+    <title>Cocinas | Kitchen Hub</title>
+    <link rel="icon" href="../img/favicon.ico" sizes="48x48">
+    <link rel="icon" href="../img/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&display=swap" rel="stylesheet">
+
+    <!-- Leaflet: librería de mapas gratuita, no necesita API key -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- inicio.css trae la base compartida (colores, encabezado, pie) -->
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/cocina.css">
+</head>
+
+<body>
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="logo" href="index.html" aria-label="Kitchen Hub, ir al inicio">
+            <img src="../img/logov1.png" alt="" width="44" height="44">
+            <span>Kitchen Hub</span>
+        </a>
+        <nav class="menu" aria-label="Navegación principal">
+            <a href="inicio.html">Inicio</a>
+            <a href="cocina.html" aria-current="page">Cocinas</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="masinfo.html">Más info</a>
+            <a href="/app/">Reservar equipos</a>
+        </nav>
+    </header>
+
+    <main id="contenido">
+
+        <section class="cabecera-cocinas" aria-labelledby="titulo">
+            <h1 id="titulo">Elige tu cocina.</h1>
+            <p>Pasa el cursor sobre un punto rojo para ver el equipo, el horario y el precio. En el celular, toca el punto.</p>
+        </section>
+        <section class="mapa-seccion" aria-label="Mapa de cocinas">
+            <div id="mapa" role="region" aria-label="Mapa interactivo con la ubicación de las cocinas"></div>
+        </section>
+        <section class="listado" aria-labelledby="titulo-listado">
+            <h2 id="titulo-listado" class="solo-lectores">Lista de cocinas</h2>
+            <ol class="lista-cocinas" id="lista-cocinas"></ol>
+            <noscript><p class="secundario">Activa JavaScript para ver el mapa y la lista de cocinas.</p></noscript>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p>www.deliverykitchen.com</p>
+        <nav aria-label="Enlaces del pie">
+            <a href="cocina.html">Cocinas</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="masinfo.html">Más info</a>
+            <a href="/app/">Reservar equipos</a>
+        </nav>
+        <p>&copy; 2026 Kitchen Hub</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/cocina.js" defer></script>
+
+</body>
+</html>
