@@ -1,0 +1,77 @@
+/* Se carga después de inicio.css: usa sus variables (--negro, --blanco, --gris, --linea, --margen) */
+
+/* ===== CABECERA ===== */
+
+.cabecera-servicios {
+    display: grid;
+    gap: 24px;
+    padding: clamp(24px, 4vw, 48px) var(--margen) clamp(40px, 6vw, 80px);
+}
+
+.cabecera-servicios h1 {
+    font-size: clamp(3rem, 11vw, 9.5rem);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+}
+.cabecera-servicios h1 span { display: block; }
+
+.cabecera-servicios p {
+    max-width: 48ch;
+    font-size: 1.15rem;
+    color: var(--gris);
+    text-wrap: pretty;
+}
+
+/* ===== SERVICIOS ===== */
+
+.servicios { padding: 0 var(--margen); }
+
+.lista-servicios { list-style: none; border-top: 1px solid var(--linea); }
+
+.servicio {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 16px clamp(32px, 6vw, 96px);
+    padding: clamp(28px, 4vw, 48px) 0;
+    border-bottom: 1px solid var(--linea);
+}
+
+.servicio-titulo h2 {
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+.servicio-titulo p { margin-top: 8px; color: var(--gris); }
+
+.servicio-detalle { display: grid; gap: 18px; align-content: start; max-width: 56ch; }
+.servicio-detalle > p { font-size: 1.15rem; text-wrap: pretty; }
+
+.servicio-detalle ul { list-style: none; border-top: 1px solid var(--linea); }
+.servicio-detalle li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--linea);
+    color: var(--gris);
+}
+
+/* ===== CIERRE ===== */
+
+.cierre {
+    display: flex; flex-wrap: wrap;
+    align-items: center; justify-content: space-between;
+    gap: 24px 48px;
+    padding: clamp(48px, 8vw, 112px) var(--margen);
+}
+.cierre h2 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+/* ===== TABLET / MÓVIL ===== */
+
+@media (max-width: 900px) {
+    .servicio { grid-template-columns: 1fr; }
+}
